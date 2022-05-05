@@ -1,7 +1,12 @@
 from Class import *
 from numpy import abs
+import matplotlib.pyplot as plt
 
-def Solve(A=Ballistic_Object(), dt=0.1, tf=100):
+def Solve(A=Ballistic_Object(), dt=0.1, tf=100, graph_ON=True):
+    if graph_ON:
+        plt.figure("Ballistic")
+        list_x = [A.x]
+        list_y = [A.y]
     t = 0
     print("running ...")
     while t <= tf:
@@ -15,3 +20,9 @@ def Solve(A=Ballistic_Object(), dt=0.1, tf=100):
         A.y += A.vy*dt
 
         t += dt
+
+        if graph_ON:
+            plt.plot(A.x,A.y,"ro")
+            plt.pause(0.1)
+            list_x.append(A.x)
+            list_y.append(A.y)
