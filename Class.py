@@ -1,5 +1,7 @@
+from numpy import sqrt
+
 g = 9.81
-P0 = 1.225 # pressure at sea level (bar)
+Rho = 1.225 # air density at sea level (bar)
 
 
 class Ballistic_Object:
@@ -13,3 +15,6 @@ class Ballistic_Object:
         self.vy = vy
         self.ax = 0
         self.ay = 0
+
+        self.V = sqrt(self.vx**2 + self.vy**2)
+        self.A = sqrt(self.ax**2 + self.ay**2)
