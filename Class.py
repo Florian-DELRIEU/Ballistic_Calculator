@@ -18,3 +18,6 @@ class Ballistic_Object:
 
         self.V = sqrt(self.vx**2 + self.vy**2)
         self.A = sqrt(self.ax**2 + self.ay**2)
+
+        self.color = "r"
+        self.Name = ""

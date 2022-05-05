@@ -22,7 +22,7 @@ def Solve(A=Ballistic_Object(), dt=0.1, tf=100, graph_ON=True):
         t += dt
 
         if graph_ON:
-            plt.plot(A.x,A.y,"ro")
-            plt.pause(0.1)
+            plt.plot(A.x,A.y,A.color+"o")
+            #plt.pause(0.1)
             list_x.append(A.x)
             list_y.append(A.y)
