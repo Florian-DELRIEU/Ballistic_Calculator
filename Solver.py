@@ -9,7 +9,7 @@ def Solve(A=Ballistic_Object(), dt=0.1, tf=100, graph_ON=True):
         list_y = [A.y]
     t = 0
     print("running ...")
-    while t <= tf:
+    while t <= tf and A.y >= 0 :
         A.ax = ( -1/2*Rho*A.surface*abs(A.vx)*A.drag_coefficient*A.vx       ) / A.mass
         A.ay = ( -1/2*Rho*A.surface*abs(A.vy)*A.drag_coefficient*A.vy - g   ) / A.mass
 
@@ -23,6 +23,6 @@ def Solve(A=Ballistic_Object(), dt=0.1, tf=100, graph_ON=True):
 
         if graph_ON:
             plt.plot(A.x,A.y,A.color+"o")
-            #plt.pause(0.1)
+            #plt.pause(0.01)
             list_x.append(A.x)
             list_y.append(A.y)
