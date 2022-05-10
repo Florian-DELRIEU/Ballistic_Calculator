@@ -1,6 +1,6 @@
-from numpy import sqrt
+import numpy as np
 
-g = 9.81
+g = 10
 Rho = 1.225 # air density at sea level (bar)
 
 
@@ -16,8 +16,23 @@ class Ballistic_Object:
         self.ax = 0
         self.ay = 0
 
-        self.V = sqrt(self.vx**2 + self.vy**2)
-        self.A = sqrt(self.ax**2 + self.ay**2)
+        self.V = np.sqrt(self.vx**2 + self.vy**2)
+        self.A = np.sqrt(self.ax**2 + self.ay**2)
 
         self.color = "r"
         self.Name = ""
+
+        self.list_x = []
+        self.list_y = []
+        self.list_vx = []
+        self.list_vy = []
+        self.list_ax = []
+        self.list_ay = []
+
+    def save_kinetics(self):
+        self.list_x.append(self.x)
+        self.list_y.append(self.y)
+        self.list_vx.append(self.vx)
+        self.list_vy.append(self.vy)
+        self.list_ax.append(self.ax)
+        self.list_ay.append(self.ay)
