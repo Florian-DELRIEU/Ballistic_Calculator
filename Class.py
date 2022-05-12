@@ -22,6 +22,7 @@ class Ballistic_Object:
         self.color = "r"
         self.Name = ""
 
+        self.list_t = []
         self.list_x = []
         self.list_y = []
         self.list_vx = []
@@ -29,7 +30,8 @@ class Ballistic_Object:
         self.list_ax = []
         self.list_ay = []
 
-    def save_kinetics(self):
+    def save_kinetics(self,t):
+        self.list_t.append(t)
         self.list_x.append(self.x)
         self.list_y.append(self.y)
         self.list_vx.append(self.vx)
