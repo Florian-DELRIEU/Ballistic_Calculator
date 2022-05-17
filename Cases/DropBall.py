@@ -1,7 +1,7 @@
 from Class import *
 from Solver import Solve
 import matplotlib.pyplot as plt
-from numpy import cos,tan,arange
+
 
 Initial_velocity = 100
 Initial_angle =  -45

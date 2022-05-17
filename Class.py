@@ -1,7 +1,7 @@
 import numpy
 from numpy import sqrt,arctan,cos,sin
 
-g = 10
+g = 9.81
 Rho = 1.225 # air density at sea level (bar)
 
 
